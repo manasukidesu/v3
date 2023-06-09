@@ -8,13 +8,13 @@
         type="number"
       />
       <template v-if="!searchKey">
-        <li ref="mana" v-for="item in list">{{ item }}</li>
+        <li :ref="mana1" v-for="item in list">{{ item }}</li>
       </template>
       <template v-else>
-        <li v-for="item in searchList">{{ item }}</li>
+        <li :ref="mana2" v-for="item in searchList">{{ item }}</li>
       </template>
     </ul>
-    <button @click="() => console.log($refs.mana)">点击获取ref</button>
+    <h1>{{ mana1List.toString() }}</h1>
     <button @click="$emit('update:name', '你好' + Math.random())">子组件点击改变name</button>
   </div>
 </template>
@@ -45,10 +45,23 @@ export default {
     let { list, getlist } = useUserRepositories(user);
     // 搜索列表
     let { searchKey, searchList } = useRepositoryNameSearch(list);
+    // $refs 测试
+    let mana2List = [];
+    let mana2 = (el) => {
+      console.log(`output->el`, el);
+      mana2List.push(el);
+    };
+    // $refs mana1测试
+    let mana1List = [];
+    let mana1 = (el) => (console.log(`output->el`, el), mana1List.push(el));
     return {
       list,
       searchKey,
       searchList,
+      mana2List,
+      mana2,
+      mana1,
+      mana1List,
     };
   },
 };
