@@ -13,7 +13,7 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   rules: {
-    'vue/comment-directive': 'off',
+    'no-unused-vars': 'off',
     // // TS
     // "@typescript-eslint/no-explicit-any": "off",
     // "no-debugger": "off",
@@ -37,15 +37,18 @@ module.exports = {
     //   }
     // ],
     // Vue
+    'vue/comment-directive': 'off',
     'vue/no-v-html': 'off',
     'vue/require-default-prop': 'off',
     'vue/require-explicit-emits': 'off',
     'vue/multi-word-component-names': 'off',
+    'vue/require-v-for-key': 'off',
+    'vue/no-unused-components': 'off',
     'vue/html-self-closing': [
       'error',
       {
         html: {
-          void: 'never',
+          void: 'any',
           normal: 'any',
           component: 'any',
         },
