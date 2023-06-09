@@ -1,21 +1,21 @@
 /// <reference types="vitest" />
-import { loadEnv } from 'vite'
-import path, { resolve } from 'path'
-import vue from '@vitejs/plugin-vue'
-import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import { loadEnv } from 'vite';
+import path, { resolve } from 'path';
+import vue from '@vitejs/plugin-vue';
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 
 /** 配置项文档：https://cn.vitejs.dev/config */
 export default (configEnv) => {
-  const viteEnv = loadEnv(configEnv.mode, process.cwd())
-  const { VITE_PUBLIC_PATH } = viteEnv
+  const viteEnv = loadEnv(configEnv.mode, process.cwd());
+  const { VITE_PUBLIC_PATH } = viteEnv;
   return {
     /** 打包时根据实际情况修改 base */
     base: VITE_PUBLIC_PATH,
     resolve: {
       alias: {
         /** @ 符号指向 src 目录 */
-        '@': resolve(__dirname, './src')
-      }
+        '@': resolve(__dirname, './src'),
+      },
     },
     server: {
       /** 是否开启 HTTPS */
@@ -29,7 +29,7 @@ export default (configEnv) => {
       /** 跨域设置允许 */
       cors: true,
       /** 端口被占用时，是否直接退出 */
-      strictPort: false
+      strictPort: false,
       /** 接口代理 */
       // proxy: {
       //   '/api/v1': {
@@ -51,13 +51,13 @@ export default (configEnv) => {
         compress: {
           drop_console: false,
           drop_debugger: true,
-          pure_funcs: ['console.log']
+          pure_funcs: ['console.log'],
         },
         format: {
           /** 删除注释 */
-          comments: false
-        }
-      }
+          comments: false,
+        },
+      },
     },
     /** Vite 插件 */
     plugins: [
@@ -65,8 +65,8 @@ export default (configEnv) => {
       /** SVG */
       createSvgIconsPlugin({
         iconDirs: [path.resolve(process.cwd(), 'src/icons/svg')],
-        symbolId: 'icon-[dir]-[name]'
-      })
+        symbolId: 'icon-[dir]-[name]',
+      }),
       /** 自动按需引入 (已更改为完整引入，所以注释了) */
       // AutoImport({
       //   dts: "./types/auto-imports.d.ts",
@@ -88,7 +88,7 @@ export default (configEnv) => {
     /** Vitest 单元测试配置：https://cn.vitest.dev/config */
     test: {
       include: ['tests/**/*.test.ts'],
-      environment: 'jsdom'
-    }
-  }
-}
+      environment: 'jsdom',
+    },
+  };
+};

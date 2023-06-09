@@ -1,5 +1,5 @@
 /* eslint-env node */
-require('@rushstack/eslint-patch/modern-module-resolution')
+require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
   root: true,
@@ -7,10 +7,10 @@ module.exports = {
     'plugin:vue/vue3-essential',
     'eslint:recommended',
     '@vue/eslint-config-prettier/skip-formatting',
-    '@vue/prettier'
+    '@vue/prettier',
   ],
   parserOptions: {
-    ecmaVersion: 'latest'
+    ecmaVersion: 'latest',
   },
   rules: {
     'vue/comment-directive': 'off',
@@ -45,20 +45,20 @@ module.exports = {
       'error',
       {
         html: {
-          void: 'always',
-          normal: 'always',
-          component: 'always'
+          void: 'never',
+          normal: 'any',
+          component: 'any',
         },
         svg: 'always',
-        math: 'always'
-      }
+        math: 'always',
+      },
     ],
     // Prettier
     'prettier/prettier': [
       'error',
       {
-        endOfLine: 'auto'
-      }
-    ]
-  }
-}
+        endOfLine: 'auto',
+      },
+    ],
+  },
+};
