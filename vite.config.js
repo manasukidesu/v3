@@ -1,3 +1,4 @@
+/* eslint-env node */
 /// <reference types="vitest" />
 import { loadEnv } from 'vite';
 import path, { resolve } from 'path';
