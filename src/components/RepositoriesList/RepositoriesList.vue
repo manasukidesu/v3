@@ -38,7 +38,8 @@ export default {
       type: String,
     },
   },
-  setup(_props) {
+  setup(_props, { emit }) {
+    console.log(`output->emits`, emit);
     // 将props 变为响应式
     const { user } = toRefs(_props);
     // 改变user 更新显示
@@ -48,12 +49,11 @@ export default {
     // $refs 测试
     let mana2List = [];
     let mana2 = (el) => {
-      console.log(`output->el`, el);
       mana2List.push(el);
     };
     // $refs mana1测试
     let mana1List = [];
-    let mana1 = (el) => (console.log(`output->el`, el), mana1List.push(el));
+    let mana1 = (el) => mana1List.push(el);
     return {
       list,
       searchKey,
