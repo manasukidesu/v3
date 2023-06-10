@@ -1,10 +1,15 @@
-<script setup></script>
+<script setup>
+import { useDark, useToggle } from '@vueuse/core';
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
+</script>
 
 <template>
     <header>
         <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
     </header>
-    <RouterView></RouterView>
+    <button @click="toggleDark">点击</button>
+    <div class="dark"><RouterView></RouterView></div>
     <footer>底部</footer>
 </template>
 
