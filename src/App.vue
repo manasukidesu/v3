@@ -9,7 +9,9 @@ const toggleDark = useToggle(isDark);
         <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
     </header>
     <button @click="toggleDark">点击</button>
-    <div class="dark"><RouterView></RouterView></div>
+    <div class="dark">
+        <RouterView></RouterView>
+    </div>
     <footer>底部</footer>
 </template>
 
