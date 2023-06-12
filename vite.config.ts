@@ -92,9 +92,9 @@ export default configEnv => {
             }),
         ],
         /** Vitest 单元测试配置：https://cn.vitest.dev/config */
-        test: {
-            include: ["tests/**/*.test.ts"],
-            environment: "jsdom",
-        },
+        // test: {
+        //     include: ["tests/**/*.test.ts"],
+        //     environment: "jsdom",
+        // },
     };
 };
