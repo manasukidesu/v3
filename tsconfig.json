@@ -11,6 +11,8 @@
         "allowJs": true,
         "esModuleInterop": true,
         "lib": ["esnext", "dom"],
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
         "paths": {
             "@/*": ["src/*"]
         },

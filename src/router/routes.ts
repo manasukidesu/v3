@@ -15,5 +15,10 @@ const routes = [
         name: "about",
         component: () => import("../views/AboutView.vue"),
     },
+    {
+        path: "/reative",
+        name: "reative",
+        component: () => import("../views/Reactive/index.vue"),
+    },
 ];
 export default routes;
