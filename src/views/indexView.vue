@@ -5,7 +5,6 @@
 </template>
 
 <script setup lang="ts">
-import { Check, Delete, Edit, Message, Search, Star } from '@element-plus/icons-vue';
-import { mana } from './mana.js'
+import { Search } from '@element-plus/icons-vue';
 </script>
 <style></style>
