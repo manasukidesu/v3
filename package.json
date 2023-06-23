@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "dev": "vite --mode test",
+        "start": "vite --mode test",
         "build": "vite build",
         "preview": "vite preview",
         "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
@@ -19,7 +19,6 @@
     "devDependencies": {
         "@rushstack/eslint-patch": "^1.2.0",
         "@typescript-eslint/eslint-plugin": "^5.59.9",
-        "@typescript-eslint/parser": "^5.59.9",
         "@vitejs/plugin-vue": "^4.2.3",
         "@vue/eslint-config-prettier": "^7.1.0",
         "eslint": "^8.42.0",
@@ -33,6 +32,7 @@
         "unplugin-vue-components": "^0.25.1",
         "vite": "^4.3.5",
         "vite-plugin-svg-icons": "^2.0.1",
-        "vitest": "^0.31.3"
+        "vitest": "^0.31.3",
+        "vue-eslint-parser": "^9.3.1"
     }
 }
