@@ -5,7 +5,11 @@ module.exports = {
     root: true,
     parser: "vue-eslint-parser",
     plugins: ["@typescript-eslint"],
-    extends: ["plugin:vue/vue3-essential", "eslint:recommended"],
+    extends: [
+        "plugin:vue/vue3-essential",
+        "eslint:recommended",
+        "./types/.eslintrc-auto-import.json",
+    ],
 
     parserOptions: {
         ecmaVersion: "latest",
@@ -13,6 +17,7 @@ module.exports = {
         parser: "@typescript-eslint/parser",
     },
     rules: {
+        "no-undef": 0,
         "no-unused-vars": "off",
         // // TS
         "@typescript-eslint/no-explicit-any": "off",

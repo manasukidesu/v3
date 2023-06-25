@@ -76,8 +76,8 @@ export default configEnv => {
             /** 自动按需引入 */
             AutoImport({
                 dts: "./types/auto-imports.d.ts",
-                /** 自动按需导入 Element Plus 相关函数，比如 ElMessage */
-                resolvers: [ElementPlusResolver()],
+                /** 自动按需导入 Element Plus 相关函数，比如 ElMessage(带样式) */
+                resolvers: [ElementPlusResolver(), IconsResolver({ prefix: "Icon" })],
                 // /** 根据自动按需导入的相关 API，生成 .eslintrc-auto-import.json 文件供 Eslint 识别 */
                 eslintrc: {
                     enabled: true, // 默认 false
@@ -88,7 +88,10 @@ export default configEnv => {
             Components({
                 dts: "./types/components.d.ts",
                 /** 自动按需导入 Element Plus 组件 */
-                resolvers: [ElementPlusResolver()],
+                resolvers: [ElementPlusResolver(), IconsResolver({ enabledCollections: ["ep"] })],
+            }),
+            Icons({
+                autoInstall: true,
             }),
         ],
         /** Vitest 单元测试配置：https://cn.vitest.dev/config */
