@@ -7,10 +7,14 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    BackHome: typeof import('./../src/components/BackHome.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     IDxMenu: typeof import('~icons/dx/menu')['default']
     IDxSearch: typeof import('~icons/dx/search')['default']
     IDxSreach: typeof import('~icons/dx/sreach')['default']
+    IEpHome: typeof import('~icons/ep/home')['default']
+    IEpHouse: typeof import('~icons/ep/house')['default']
+    IEpIcon: typeof import('~icons/ep/icon')['default']
     IEpMenu: typeof import('~icons/ep/menu')['default']
     IEpSearch: typeof import('~icons/ep/search')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

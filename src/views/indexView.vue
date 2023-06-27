@@ -1,6 +1,7 @@
 <template>
     <h1>HOME</h1>
-    <el-button @click="toPages">reative&ref</el-button>
+    <ElButton @click="toPages">reative&ref</ElButton>
+    <ElButton @click="toPages">computed</ElButton>
 </template>
 
 <script setup lang="ts">

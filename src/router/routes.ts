@@ -20,5 +20,10 @@ const routes = [
         name: "reative&ref",
         component: () => import("../views/Reactive/index.vue"),
     },
+    {
+        path: "/computed",
+        name: "computed",
+        component: () => import("../views/Compued/index.vue"),
+    },
 ];
 export default routes;
