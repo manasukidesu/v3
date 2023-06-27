@@ -16,8 +16,8 @@ const routes = [
         component: () => import("../views/AboutView.vue"),
     },
     {
-        path: "/reative",
-        name: "reative",
+        path: "/reative&ref",
+        name: "reative&ref",
         component: () => import("../views/Reactive/index.vue"),
     },
 ];

@@ -67,7 +67,7 @@ export default configEnv => {
         },
         /** Vite 插件 */
         plugins: [
-            vue(),
+            vue({ reactivityTransform: true }),
             /** SVG */
             createSvgIconsPlugin({
                 iconDirs: [path.resolve(process.cwd(), "src/assets/svg")],

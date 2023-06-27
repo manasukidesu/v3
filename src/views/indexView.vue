@@ -1,32 +1,14 @@
 <template>
     <h1>HOME</h1>
-    <el-button @click="handelClick">点击</el-button>
-    <SvgIcon name="logo"></SvgIcon>
+    <el-button @click="toPages">reative&ref</el-button>
 </template>
 
 <script setup lang="ts">
-const handelClick = () => {
-    ElMessageBox.confirm(
-        'proxy will permanently delete the file. Continue?',
-        'Warning',
-        {
-            confirmButtonText: 'OK',
-            cancelButtonText: 'Cancel',
-            type: 'warning',
-        }
-    )
-        .then(() => {
-            ElMessage({
-                type: 'success',
-                message: 'Delete completed',
-            })
-        })
-        .catch(() => {
-            ElMessage({
-                type: 'info',
-                message: 'Delete canceled',
-            })
-        })
+import router from '@/router';
+
+const toPages = (event: Event) => {
+    let tar: string = (event.currentTarget as HTMLButtonElement).innerText;
+    router.push(tar)
 }
 </script>
 <style></style>
