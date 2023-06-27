@@ -2,6 +2,7 @@
     <h1>HOME</h1>
     <ElButton @click="toPages">reative&ref</ElButton>
     <ElButton @click="toPages">computed</ElButton>
+    <ElButton @click="toPages">stylebind</ElButton>
 </template>
 
 <script setup lang="ts">

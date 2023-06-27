@@ -25,5 +25,10 @@ const routes = [
         name: "computed",
         component: () => import("../views/Compued/index.vue"),
     },
+    {
+        path: "/stylebind",
+        name: "stylebind",
+        component: () => import("../views/StyleBind/index.vue"),
+    },
 ];
 export default routes;
