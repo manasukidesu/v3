@@ -3,6 +3,9 @@
     <ElButton @click="toPages">reative&ref</ElButton>
     <ElButton @click="toPages">computed</ElButton>
     <ElButton @click="toPages">stylebind</ElButton>
+    <ElButton @click="toPages">Vfor</ElButton>
+    <ElButton @click="toPages">vmodel</ElButton>
+    <ElButton @click="toPages">lifecycle</ElButton>
 </template>
 
 <script setup lang="ts">

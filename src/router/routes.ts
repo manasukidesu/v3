@@ -30,5 +30,20 @@ const routes = [
         name: "stylebind",
         component: () => import("../views/StyleBind/index.vue"),
     },
+    {
+        path: "/vfor",
+        name: "vfor",
+        component: () => import("../views/vfor/index.vue"),
+    },
+    {
+        path: "/vmodel",
+        name: "vmodel",
+        component: () => import("../views/vmodel/index.vue"),
+    },
+    {
+        path: "/lifecycle",
+        name: "lifecycle",
+        component: () => import("../views/LifeCycle/index.vue"),
+    },
 ];
 export default routes;

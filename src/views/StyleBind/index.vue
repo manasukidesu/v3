@@ -4,7 +4,7 @@ import { computed, ref } from 'vue';
 let isActive = ref(false)
 let isActive2 = ref(true)
 // 计算属性样式绑定
-let classObj = computed(() => {
+let classObj = computed<Record<string, boolean>>(() => {
     return {
         mana: isActive.value,
         mana2: isActive2.value
@@ -13,11 +13,9 @@ let classObj = computed(() => {
 let showClass = computed(() => {
     let str = ''
     for (const key in classObj.value) {
-        if (Object.prototype.hasOwnProperty.call(classObj.value, key)) {
-            const el = classObj.value[key];
-            if (el) {
-                str += `-${key}`
-            }
+        const el = classObj.value[key];
+        if (el) {
+            str += `-${key}`
         }
     }
     return str
