@@ -50,5 +50,10 @@ const routes = [
         name: "watch",
         component: () => import("../views/Watch/index.vue"),
     },
+    {
+        path: "/modelimport",
+        name: "modelimport",
+        component: () => import("@/views/ModelImport/index.vue"),
+    },
 ];
 export default routes;

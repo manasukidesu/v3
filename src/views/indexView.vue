@@ -7,6 +7,7 @@
     <ElButton @click="toPages">vmodel</ElButton>
     <ElButton @click="toPages">lifecycle</ElButton>
     <ElButton @click="toPages">watch</ElButton>
+    <ElButton @click="toPages">modelimport</ElButton>
 </template>
 
 <script setup lang="ts">
