@@ -45,5 +45,10 @@ const routes = [
         name: "lifecycle",
         component: () => import("../views/LifeCycle/index.vue"),
     },
+    {
+        path: "/watch",
+        name: "watch",
+        component: () => import("../views/Watch/index.vue"),
+    },
 ];
 export default routes;

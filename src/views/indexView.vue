@@ -6,11 +6,11 @@
     <ElButton @click="toPages">Vfor</ElButton>
     <ElButton @click="toPages">vmodel</ElButton>
     <ElButton @click="toPages">lifecycle</ElButton>
+    <ElButton @click="toPages">watch</ElButton>
 </template>
 
 <script setup lang="ts">
 import router from '@/router';
-
 const toPages = (event: Event) => {
     let tar: string = (event.currentTarget as HTMLButtonElement).innerText;
     router.push(tar)
