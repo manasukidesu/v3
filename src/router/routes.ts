@@ -53,7 +53,12 @@ const routes = [
     {
         path: "/modelimport",
         name: "modelimport",
-        component: () => import("@/views/ModelImport/index.vue"),
+        component: () => import("@/views/Model/index.vue"),
+    },
+    {
+        path: "/component",
+        name: "component",
+        component: () => import("@/views/ComponentView/index.vue"),
     },
 ];
 export default routes;

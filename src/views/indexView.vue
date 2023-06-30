@@ -8,6 +8,7 @@
     <ElButton @click="toPages">lifecycle</ElButton>
     <ElButton @click="toPages">watch</ElButton>
     <ElButton @click="toPages">modelimport</ElButton>
+    <ElButton @click="toPages">component</ElButton>
 </template>
 
 <script setup lang="ts">
